@@ -1,0 +1,556 @@
+/* Kontainer utama */
+.menu-container {
+  font-family: Arial, sans-serif;
+  background-color: #333;
+  color: white;
+  background-image: url('../../../assets/img/backfround/WhatsApp\ Image\ 2024-12-04\ at\ 04.38.01.jpeg');
+  margin: 0;
+  min-height: 100vh; /* Mengatur kontainer agar memenuhi tinggi layar */
+  display: flex;
+  flex-direction: column; /* Mengatur tata letak dalam kolom */
+  padding-bottom: 110px;
+  }
+  
+  /* Header */
+  .menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // background-color: #333 ;
+    padding: 20px;
+  }
+  
+  
+  .menu-header h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .menu-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-button {
+    background-color: #00512c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .nav-button.active {
+    background-color: #007b3c;
+  }
+  
+  .divider {
+    margin: 0 10px;
+    color: white;
+  }
+  
+  /* List menu */
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+  }
+  
+  .menu-item {
+    display: flex;
+    align-items: center;
+    background-color: #444;
+    padding: 15px;
+    border-radius: 8px;
+    margin-left: 60px;
+    margin-right: 60px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .menu-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    margin-right: 15px;
+    object-fit: cover;
+  }
+  
+  .menu-info {
+    flex: 1;
+  }
+  
+  .menu-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .menu-price {
+    font-size: 14px;
+    color: #a5d6a7;
+    margin: 5px 0 0 0;
+  }
+  
+  /* Status dan tombol */
+  .menu-status {
+    text-align: right;
+  }
+  
+  .status-text {
+    margin: 0 10px 5px 0;
+    font-size: 12px;
+  }
+  
+  .status-text.available {
+    color: #a5d6a7;
+  }
+  
+  .status-text.not-available {
+    color: #e57373;
+    margin: 0 15px 5px 0;
+  }
+  
+  .menu-button {
+    padding: 10px 15px;
+    background-color: #00512c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .menu-button:hover {
+    background-color: #007b3c;
+  }
+  
+  .menu-button.disabled {
+    background-color: #777;
+    cursor: not-allowed;
+  }
+  
+  .menu-footer {
+    position: fixed; /* Menempel di bagian bawah */
+    bottom: 0; /* Posisi footer di bawah */
+    left: 50%; /* Memulai dari tengah layar */
+    transform: translateX(-50%); /* Memindahkan footer ke kiri sebesar setengah lebar untuk memastikan di tengah */
+    width: 100%; /* Lebar penuh */
+    max-width: 800px; /* Batasi lebar maksimal */
+    background-color: #222;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+
+}
+  
+  .footer-button {
+    padding: 10px 15px;
+    background-color: #00512c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .footer-button:hover {
+    background-color: #007b3c;
+  }
+  
+
+
+  // Detail Menu
+.form-wrapper {
+  display: flex;
+  justify-content: center;  
+  align-items: center;        
+}       
+
+.form-container {
+  background-color: #444;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;              /* Lebar 100% dari kontainer induk */
+  max-width: 700px;         /* Lebar maksimum 700px */
+  color: white;
+  margin: 20px;             /* Memberikan sedikit ruang di sekitar form */
+}
+
+
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.order-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  background-color: #555;
+  color: white;
+  border: 1px solid #777;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #007b3c;
+  background-color: #666;
+}
+
+/* Ringkasan Pesanan */
+.order-summary {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #777;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.summary-item-name {
+  font-size: 16px;
+}
+
+.summary-item-price {
+  font-size: 16px;
+}
+
+.summary-total {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Tombol Kirim Pesanan */
+.form-submit-button {
+  background-color: #00512c;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.form-submit-button:hover {
+  background-color: #007b3c;
+}
+
+/* Container untuk keseluruhan pesanan */
+.pesanan-list {
+  padding: 30px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 20px auto;
+  width: 95%;
+}
+
+.pesanan-anda{
+  color: black;
+}
+
+/* Header untuk Nama Pemesan dan Waktu */
+.pesanan-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.pesanan-nama, .pesanan-waktu .pesanan-meja {
+  font-weight: bold;
+  color: #2980b9;
+}
+
+/* Tampilan setiap item pesanan */
+.pesanan-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+// /* Membuat gambar dan nama berada dekat */
+// .pesanan-item-image {
+//   margin-right: 1px; /* Ruang antara gambar dan teks */
+// }
+
+.pesanan-item-image img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.pesanan-item-info {
+  display: flex;
+  align-items: center; /* Agar nama dan harga sejajar secara vertikal */
+  flex-grow: 1;
+  gap: 10px;  /* Jarak antara nama dan harga */
+}
+
+.pesanan-item-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #34495e;
+  flex-grow: 1;  /* Memungkinkan nama untuk mengambil ruang yang tersisa */
+}
+
+.pesanan-item-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #27ae60;
+  text-align: right;
+  margin-left: auto;  /* Memastikan harga berada di pojok kanan */
+}
+
+/* Total Harga */
+.pesanan-total {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.pesanan-total span {
+  color: #27ae60;
+}
+
+.pesanan-status {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.status-text {
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 15px;
+}
+
+.status-text.proses {
+  color: #f39c12; /* Warna untuk status 'Sedang Diproses' */
+}
+
+.status-text.selesai {
+  color: #27ae60; /* Warna untuk status 'Sudah Di Meja' */
+}
+
+
+//quantity controll
+.menu-quantity-control {
+  display: flex; /* Membuat elemen di dalamnya sejajar horizontal */
+  align-items: center; /* Membuat elemen sejajar vertikal */
+  gap: 8px; /* Mengatur jarak antar ikon */
+}
+
+.menu-button-remove, 
+.menu-button-quantity {
+  background-color: #f0f0f0; /* Warna latar belakang tombol */
+  border: none; /* Hilangkan border */
+  border-radius: 4px; /* Membulatkan sudut */
+  padding: 4px 8px; /* Jarak di dalam tombol */
+  cursor: pointer; /* Ubah kursor saat hover */
+}
+
+.menu-button-remove i, 
+.menu-button-quantity i {
+  font-size: 16px; /* Ukuran ikon */
+  color: #333; /* Warna ikon */
+}
+
+.menu-quantity {
+  font-size: 14px; /* Ukuran teks jumlah */
+  font-weight: bold; /* Teks tebal */
+  margin: 0 4px; /* Jarak dengan tombol di kiri-kanan */
+}
+
+
+//backbuton form
+.back-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  margin-left: 10px;
+}
+
+.back-button i {
+  font-size: 22px;  /* Ukuran ikon panah */
+  margin-right: 8px; /* Memberikan jarak antara ikon dan teks */
+}
+
+.back-button:hover {
+  color: #00b4cc;
+}
+
+.back-button:focus {
+  outline: none;
+}
+
+//loading
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loading-spinner {
+  font-size: 24px;
+  color: white;
+}
+
+
+//filter menu
+.menu-categories {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.menu-categories button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.menu-categories button.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.menu-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+
+
+
+
+
+/* Responsif untuk perangkat kecil */
+@media (max-width: 768px) {
+
+  .pesanan-wraper{
+    padding: 20px;
+    padding-top: 0;
+    margin: 0;
+  }
+
+  .pesanan-list {
+    padding: 15px;
+    width: 90%;
+  }
+
+  .menu-footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Menjaga posisi footer tetap di tengah */
+    width: 90%; /* Lebar 90% dari layar untuk menghindari melebihi batas */
+    max-width: 700px; /* Membatasi lebar maksimal */
+    padding: 10px; /* Mengurangi padding */
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  }
+
+  .footer-button {
+    width: 30%; /* Tombol memenuhi lebar container */
+    font-size: 14px; /* Ukuran font lebih kecil */
+    padding: 10px; /* Padding tombol yang lebih kecil */
+  }
+
+
+  .menu-item {
+    display: flex;
+    align-items: center;
+    background-color: #444;
+    padding: 15px;
+    border-radius: 8px;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .form-container {
+    padding: 20px; /* Kurangi padding */
+    margin: 15px; /* Hilangkan margin */
+    width: 100%; /* Lebar penuh layar */
+    max-width: none; /* Hilangkan batas lebar */
+    border-radius: 8px; /* Hilangkan radius sudut */
+  }
+
+  .menu-categories button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+
+}
